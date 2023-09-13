@@ -29,17 +29,11 @@ public class Main {
                     "\n2. Iniciar hilo" +
                     "\n3. Salir"));
             switch (dec) {
-                case 1:
-                    t.interrupt();
-                    break;
-                case 2:
-                    t.run();
-                    break;
-                case 3:
-                    System.out.println("Chao");
-                    break;
-                default:
-                    JOptionPane.showMessageDialog(null,"Opcion incorrecta");
+                case 1 -> t.pausarHilo();
+                case 2 -> t.reanudarHilo();
+
+                case 3 -> System.exit(32426);
+                default -> JOptionPane.showMessageDialog(null, "Opcion incorrecta");
             }
         }
     }
